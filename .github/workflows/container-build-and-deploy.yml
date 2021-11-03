@@ -28,6 +28,7 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
       
+    - name: 'Run build and deploy'
       run: |
         docker build . --file Dockerfile --tag nodeapi-container:$(date +%s)
         docker push contappsdemo.azurecr.io/nodeapi-container:$(date +%s)
