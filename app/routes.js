@@ -16,7 +16,7 @@ module.exports = function routes(app, express) {
 
     // base route
     app.get('/', function (req, res) { res.status(200).send('API Server Running...') });
-    app.get('/emoji', function (req, res) { res.status(200).send('Emojis here...') });
+    app.get('/emoji', function (req, res) { res.status(200).send('Emojis Response Goes Here...') });
 
     // error handler
 	app.use(function (err, req, res, next) {
