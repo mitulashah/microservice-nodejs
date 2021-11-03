@@ -27,6 +27,7 @@ jobs:
         login-server: contappsdemo.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+      
       run: |
         docker build . --file Dockerfile --tag nodeapi-container:$(date +%s)
         docker push contappsdemo.azurecr.io/nodeapi-container:$(date +%s)
