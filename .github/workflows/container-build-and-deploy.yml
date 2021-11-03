@@ -32,5 +32,5 @@ jobs:
       
     - name: 'Run build and deploy'
       run: |
-        docker build . --file Dockerfile --tag contappsdemo.azurecr.io/nodeapi-container:${{ github.sha }}
-        docker push contappsdemo.azurecr.io/nodeapi-container:${{ github.sha }}
+        docker build . --file Dockerfile --tag contappsdemo.azurecr.io/nodeapi-container:latest
+        docker push contappsdemo.azurecr.io/nodeapi-container:latest
